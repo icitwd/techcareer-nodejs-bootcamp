@@ -966,11 +966,19 @@ var products = [
 
 products.forEach(function(item){
 
-    console.log(item.name);
+    //console.log(item.name);
 
 })
 
 //bu dizide kaç tane eleman var? yani kaç ürün var??
+var productCount = products.length;
+
+// var productsCount = 0;
+// products.forEach(function(item,index){
+//     productsCount++;
+// })
+
+console.log('Count', productCount);
 
 //en pahalı ürün?
 
