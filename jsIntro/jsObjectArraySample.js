@@ -964,10 +964,42 @@ var products = [
 ]
 
 
-products.forEach(function(item){
+//Find metodu
+// id si 13 olan ürünü console a yazdır.
+var findProduct = products.find(q => q.id == 13)
+var findProduct2 = products.find(q => q.categoryId == 2)
 
+
+//ürün fiyatı 30 dan büyük olan ürünleri bana ver
+
+var filteredProducts = products.filter(q => q.unitPrice > 30)
+// console.log('filteredProducts', filteredProducts);
+
+//ürün fiyatı 30 dan büyük olan KAÇ ADET ürünüm var
+var filteredProductsCount = filteredProducts.length;
+
+
+var filteredProducts2 = products.filter(q => q.unitPrice > 30 && q.categoryId == 2);
+console.log('filteredProducts', filteredProducts2);
+
+
+
+
+
+// var findProduct = null;
+// products.forEach(function(item){
+//     if(item.id == 13){
+//         findProduct = item
+//     }
+
+// })
+// console.log(findProduct);
+
+
+
+
+products.forEach(function (item) {
     //console.log(item.name);
-
 })
 
 //bu dizide kaç tane eleman var? yani kaç ürün var??
@@ -981,7 +1013,5 @@ var productCount = products.length;
 console.log('Count', productCount);
 
 //en pahalı ürün?
-
 //en ucuz ürün?
-
 //discontinued false olan kaç ürün var???
