@@ -29530,11 +29530,34 @@ const orders = [
     ]
     }
     ]
+// console.log(orders[0].details[0].unitPrice);
+
+// Ürünleri pahalıdan ucuza sırala sort metodu kullanarak 
+var orders2 = []
+orders.forEach(function (x) {
+            x.details.forEach(function(y){
+             orders2.push(y);
+             
+            })
+})
+console.log(orders2.unitPrice.sort(function(a, b){return b - a}));
+ 
 
 
+// Sort kullanmayarak
 
 
-  
+// Brezilya dan kaç adert sipariş aldım
+var i = 0
+  orders.forEach(function (item){
+       if( item.shipAddress.country === "Brazil") {
+        i++;
         
+       }
+  })console.log(i);
 
-        console.log(orders[0].details[0].unitPrice);
+// Brezilyadan aldığım siparişlerin toplam tutarı
+
+
+
+// Birezilyadan aldığım en yüksek sipariş
